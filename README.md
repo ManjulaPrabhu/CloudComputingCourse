@@ -1,5 +1,5 @@
 # CloudComputingCourse
-Elastic Beanstalk link: Courseservice-env.fpt2kmdkny.us-east-1.elasticbeanstalk.com 
+Elastic Beanstalk link: Courseservice-env.2qatkvitjp.us-west-2.elasticbeanstalk.com 
 List of APIs implemented:
 1.	Class: Program.java
 Resource: ProgramResource.java
