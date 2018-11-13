@@ -2,22 +2,7 @@
 Elastic Beanstalk link: Courseservice-env.2qatkvitjp.us-west-2.elasticbeanstalk.com 
 
 List of APIs implemented:
-
-1.Programs:
-
-GET: getAllPrograms() --> webapi/programs
-
-GET: getProgram(long programId) --> webapi/programs/{programId}
-
-POST : addProgram() --> webapi/programs
-parameters to be passed through body: {“programName” :”xyzstring”, “associatedCourseId” : [] }
-
-DELETE: deleteProgram(long programId) webapi/programs/{programId}
-
-PUT: updateProgram(long programId, Program prog) 
-parameters to be passed through body: {“programName” :”xyzstring”, “associatedCourseId” : [] }
-
-2.Courses
+1.Courses
 
 GET: getAllCourses() --> webapi/courses
 
@@ -26,26 +11,12 @@ GET: getCourse(long coursed) --> webapi/courses/{courseId}
 POST: addCourse() --> webapi/courses
 parameters to be passed through body: { “courseName”: “abc”, “associatedLectureId” :[], “associatedStudentsId”: [], “associatedProfessorId”: “1”, “board”: “cc”, “associatedTAId” : “1”}
 
-DELETE: deleteCourse(long coursed) --> webapi/courses/{courseId}
+DELETE: deleteCourse(long courseId) --> webapi/courses/{courseId}
 
 PUT: updateCourse(long courseId, Course course) --> webapi/courses
 parameters to be passed through body: { “courseName”: “abc”, “associatedLectureId” :[], “associatedStudentsId”: [], “associatedProfessorId”: “1”, “board”: “cc”, “associatedTAId” : “1”}
 
-3. Lecture
-
-GET: getAllLectures() --> webapi/lectures
-
-GET: getLecture(long lectureId) --> webapi/lectures/{lecturedid}
-
-POST: addLecture() --> webapi/lectures
-parameters to be passed through body: { “notes” : “abcs”, “associatedCourseId”: “1”}
-
-DELETE: deleteLecture(long lectureId) --> webapi/lectures/{lecturedid}
-
-PUT: updateLecture(long lectureId, Lecture lecture) webapi/lectures
-parameters to be passed through body: { “notes” : “abcs”, “associatedCourseId”: “1”}
-
-4. Student
+2. Student
 
 GET: getAllStudents() --> webapi/students
 
@@ -59,4 +30,46 @@ DELETE: deleteStudent(long studentId) -->  webapi/students/{studentid}
 PUT: updateStudent(long studentId, Student student) --> webapi/students
 parameters to be passed through body: { “firstName”: “xyz”, “associatedCourses”: [], “enrolledProgramName”: “is” }
 
+
+3. Professor
+
+GET: getAllProfessors() --> webapi/professors
+
+GET: getProfessor(long professorId) --> webapi/professors/{professorId}
+
+POST: addProfessor() --> webapi/professors
+ parameters to be passed through body: { “firstName”: “xyz”, “department”: "is", “joiningDate”: "2018/09/09" }
+
+DELETE: deleteProfessor(long professorId) -->  webapi/professors/{professorId}
+
+PUT: updateProfessor(long professorId, Professor prof) --> webapi/professors
+parameters to be passed through body: { “firstName”: “xyz”, “department”: "cs", “joiningDate”: "2017/09/09"  }
+
+4.Board
+
+GET: getAllBoards() --> webapi/board
+
+GET: getBoard(long boardId) --> webapi/board/{boardId}
+
+POST: addBoard() --> webapi/board
+ parameters to be passed through body: { "courseId" : "2"}
+
+DELETE: deleteBoard(long boardId) -->  webapi/board/{boardId}
+
+PUT: updateBoard(long boardId, Board board) --> webapi/board
+parameters to be passed through body: { "courseId" : "3"}
+
+5.Announcement
+
+GET: getAllAnnouncements() --> webapi/announcements
+
+GET: getAnnouncement(long announcementId, long boardId) --> webapi/announcements/{boardId}/{announcementId}
+
+POST: addAnnouncement() --> webapi/announcements
+ parameters to be passed through body: { "announcementText" : "abc", "boardId": "123"}
+
+DELETE: deleteAnnouncementId(long announcementId, long boardId) -->  webapi/announcements/{announcementId}
+
+PUT: updateAnnouncement(long announcementId, long boardId, Announcement announcement) --> webapi/announcements
+parameters to be passed through body: { "announcementText" : "sddssaf"}
 
