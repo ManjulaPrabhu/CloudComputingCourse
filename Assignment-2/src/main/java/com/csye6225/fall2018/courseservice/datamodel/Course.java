@@ -79,7 +79,7 @@ public class Course {
 		this.associatedProfessorId = associatedProfessorId;
 	}
 	
-	@DynamoDBAttribute(attributeName="board")
+	@DynamoDBAttribute(attributeName="boardId")
 	public Long getBoardId() {
 		return boardId;
 	}
@@ -107,6 +107,4 @@ public class Course {
 		this.id = id;
 	}
 
-
-	
 }
