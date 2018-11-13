@@ -88,6 +88,10 @@ public class CourseService {
 		oldCourseObject.setCourseName(course.getCourseName());
 		oldCourseObject.setAssociatedLectureId(course.getAssociatedLectureId());
 		oldCourseObject.setAssociatedStudentsId(course.getAssociatedStudentsId());
+		oldCourseObject.setAssociatedProfessorId(course.getAssociatedProfessorId());
+		oldCourseObject.setAssociatedTAId(course.getAssociatedTAId());
+		oldCourseObject.setBoardId(course.getBoardId());
+
 		mapper.save(oldCourseObject);
 
 		return oldCourseObject;
