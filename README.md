@@ -23,7 +23,7 @@ GET: getAllStudents() --> webapi/students
 GET: getStudent(long studentId) --> webapi/students/{studentid}
 
 POST: addStudent() --> webapi/students
- parameters to be passed through body: { “firstName”: “xyz”, "emailId": "xyz@xyz.com",“enrolledProgramName”: “is” }
+ parameters to be passed through body: { “firstName”: “xyz”, "emailId": "(valid email to check)",“enrolledProgramName”: “is” }
 
 POST: registerToCourses() --> webapi/students/{studentId}/register
  parameters to be passed through body: { “associatedCourses”: [123,121]}
