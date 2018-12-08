@@ -1,5 +1,5 @@
 # CloudComputingCourse
-Elastic Beanstalk link: Courseservice-env.2qatkvitjp.us-west-2.elasticbeanstalk.com 
+Elastic Beanstalk link: Courseservice-env-1.nccvaj53rs.us-west-2.elasticbeanstalk.com 
 
 List of APIs implemented:
 1.Courses
@@ -14,7 +14,7 @@ parameters to be passed through body: { “courseName”: “abc”, “associat
 DELETE: deleteCourse(long courseId) --> webapi/courses/{courseId}
 
 PUT: updateCourse(long courseId, Course course) --> webapi/courses
-parameters to be passed through body: { “courseName”: “abc”, “associatedLectureId” :[], “associatedStudentsId”: [], “associatedProfessorId”: “1”, “board”: “cc”, “associatedTAId” : “1”}
+parameters to be passed through body: { “courseName”: “abc”, “associatedLectureId” :[], “associatedStudentsId”: [], “associatedProfessorId”: “1”, “board”: “cc”, “associatedTAId” : “1”,"courseSNSTopic":"acscs"(valid topic ARN String)}
 
 2. Student
 
@@ -23,7 +23,10 @@ GET: getAllStudents() --> webapi/students
 GET: getStudent(long studentId) --> webapi/students/{studentid}
 
 POST: addStudent() --> webapi/students
- parameters to be passed through body: { “firstName”: “xyz”, “associatedCourses”: [], “enrolledProgramName”: “is” }
+ parameters to be passed through body: { “firstName”: “xyz”, "emailId": "xyz@xyz.com",“enrolledProgramName”: “is” }
+
+POST: registerToCourses() --> webapi/students/{studentId}/register
+ parameters to be passed through body: { “associatedCourses”: [123,121]}
 
 DELETE: deleteStudent(long studentId) -->  webapi/students/{studentid}
 
@@ -63,7 +66,7 @@ parameters to be passed through body: { "courseId" : "3"}
 
 GET: getAllAnnouncements() --> webapi/announcements
 
-GET: getAnnouncement(long announcementId, long boardId) --> webapi/announcements/{boardId}/{announcementId}
+GET: getAnnouncement(long announcementId, long boardId) --> webapi/announcements/{announcementId}
 
 POST: addAnnouncement() --> webapi/announcements
  parameters to be passed through body: { "announcementText" : "abc", "boardId": "123"}
